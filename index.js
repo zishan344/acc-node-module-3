@@ -191,6 +191,10 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
+app.all("*", (req, res) => {
+  res.send("Sorry for that. Not found any data ");
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
